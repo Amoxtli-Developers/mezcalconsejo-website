@@ -184,11 +184,11 @@ const AboutSection = () => {
                                             className={`mt-6 p-4 ${colors.bg} rounded-xl`}
                                         >
                                             <p className="text-gray-700 dark:text-gray-300 italic text-lg font-medium">
-                                                "
+                                                `&quot;
                                                 {t(
                                                     "about.sections.expert.quote"
                                                 )}
-                                                "
+                                                `&quot;
                                             </p>
                                             <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
                                                 — Maximino Vázquez
