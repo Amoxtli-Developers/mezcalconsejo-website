@@ -1,0 +1,177 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About Us",
+    "shop": "Shop",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title1": "Authentic Artisan Mezcal",
+    "subtitle1": "Discover the pure essence of Oaxacan mezcal. Crafted with ancestral techniques and agave cultivated in the sacred valleys of Oaxaca.",
+    "cta1": "Explore Collection",
+    "title2": "Traditional Process",
+    "subtitle2": "Each bottle tells the story of our master mezcaleros",
+    "cta2": "Learn More",
+    "title3": "Premium Quality",
+    "subtitle3": "We select only the finest mature agave for our mezcals",
+    "cta3": "Shop Now"
+  },
+  "about": {
+    "title": "Our Mezcal",
+    "subtitle": "A source of inspiration, because there are moments when you just need good advice to dare to do what you're passionate about.",
+    "sections": {
+      "oaxaca": {
+        "content": [
+          "When you drink mezcal, each sip evokes traits of its place of origin, each glass tells aspects of the identity of a people full of diversity and color.",
+          "With designation of origin in 9 regions of Mexico, Oaxaca produces more than 80% nationally. Mezcal production directly impacts the well-being of rural communities, generating opportunities and sources of dignified employment for thousands of families, keeping them together, without the need to emigrate to seek better sources of income.",
+          "Mezcal is much more than a spirituous beverage, it is present in places, in memories, in stories, in music, in gastronomy.",
+          "Thanks to a work of revalorization and dignification, today mezcal has gained ground in the world of cocktails and beverages, becoming present throughout the world."
+        ]
+      },
+      "expert": {
+        "content": [
+          "A process of years of work and tradition",
+          "With more than 20 years in the art of distilling mezcal; adventurous and passionate, he follows the tradition of the craft his father taught him, working the same lands with respect and care, perfecting his techniques and learning.",
+          "There is no secret, just hard work and years of experience. A man of rituals, a sensitive and wise man.",
+          "Author of the first batch of Mezcal Consejo."
+        ],
+        "quote": "Everything has a limit"
+      },
+      "location": {
+        "content": [
+          "Chichic is \"bitter\" and apan, \"in the water\" Its toponymy has been interpreted as \"River of bitterness\"; also said \"In bitter water\".",
+          "Chichicápam was one of the most important commercial centers due to its strategic location in the middle of zones and towns of the central valleys, which made it a necessary passage to the destinations we now know as the Isthmus region and Miahuatlán.",
+          "Currently its main economic activity is mezcal production."
+        ]
+      },
+      "process": {
+        "content": [
+          "The product speaks for itself. Max is very strict at every stage of the process, cultivating agave naturally and organically, without pesticides or chemical fertilizers; respecting maturation times, to cut at the precise moment and obtain the optimal amount of sugars.",
+          "To distill a clean, quality mezcal. In the graduation of the final product is the author's touch. Real mezcal is graduated above 40° the challenge is to reach a light and delicate flavor, maintaining the character and strength of mezcal."
+        ]
+      },
+      "image": {
+        "content": [
+          "Discovering Max's mezcal was a revelation, the task, making it known to the world. The responsibility was great; we had to do something amazing to be at the same level.",
+          "So we gathered efforts and visions to create a concept aligned with art, feeling, and Mexican imagination, to be able to offer a unique experience. An unforgettable experience, like good advice."
+        ]
+      }
+    },
+    "stats": {
+      "oaxacaProduction": "National production from Oaxaca",
+      "masterExperience": "Years of master's experience",
+      "denominations": "Regions with designation of origin",
+      "alcoholGraduation": "Mezcal graduation"
+    }
+  },
+  "quote": {
+    "text": "\"Mezcal is not just a drink, it is the very essence of our land, the fruit of time and the patience of our ancestors.\"",
+    "author": "— Master Mezcalero"
+  },
+  "shop": {
+    "title": "Our Selection",
+    "subtitle": "Each mezcal in our collection tells a unique story of tradition and flavor",
+    "buyNow": "Buy Now"
+  },
+  "gallery": {
+    "title": "From Agave to Bottle",
+    "subtitle": "A visual journey through our artisanal production process",
+    "categories": {
+      "agave": "Agave",
+      "process": "Process",
+      "product": "Product",
+      "experience": "Experience",
+      "people": "People",
+      "equipment": "Equipment"
+    },
+    "descriptions": {
+      "1": "Espadín agave plantations in the central valleys",
+      "2": "Master mezcalero preparing the earth oven",
+      "3": "Mature agave ready for harvest",
+      "4": "Distillation in traditional copper stills",
+      "5": "Collection of premium mezcals",
+      "6": "Mezcal tasting at our distillery",
+      "7": "Family of mezcal producers",
+      "8": "Traditional stone mill",
+      "9": "Fermentation in wooden vats"
+    }
+  },
+  "cta": {
+    "title": "Discover Authenticity",
+    "subtitle": "Join thousands of mezcal lovers who have chosen the quality and tradition of Mezcal Consejo",
+    "button": "Contact Us",
+    "secondaryButton": "View Catalog",
+    "stats": {
+      "customers": "Satisfied customers",
+      "products": "Premium products",
+      "experience": "Years of experience"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We're here to answer all your questions about our mezcals",
+    "form": {
+      "name": "Full name",
+      "namePlaceholder": "Your name",
+      "email": "Email address",
+      "emailPlaceholder": "your@email.com",
+      "message": "Message",
+      "messagePlaceholder": "Tell us what's on your mind...",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "sent": "Message sent successfully!"
+    },
+    "info": {
+      "phone": {
+        "title": "Phone",
+        "value": "+52 951 123 4567"
+      },
+      "email": {
+        "title": "Email",
+        "value": "info@mezcalconsejo.mx"
+      },
+      "location": {
+        "title": "Location",
+        "value": "Oaxaca, Mexico"
+      }
+    },
+    "social": "Follow Us"
+  },
+  "footer": {
+    "brand": {
+      "description": "Ancestral tradition, exceptional quality. Discover the authentic taste of Oaxacan mezcal crafted with traditional techniques and premium agave."
+    },
+    "navigation": "Navigation",
+    "contactTitle": "Contact",
+    "copyright": "© 2024 Mezcal Consejo. All rights reserved.",
+    "links": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookies": "Cookie Policy"
+    }
+  },
+  "ageVerification": {
+    "title": "Age Verification",
+    "message": "To access this site, please enter your date of birth:",
+    "day": "Day",
+    "dayPlaceholder": "Day",
+    "month": "Month",
+    "monthPlaceholder": "Month",
+    "year": "Year",
+    "yearPlaceholder": "Year",
+    "verify": "Verify Age",
+    "error": {
+      "incomplete": "Please complete all fields",
+      "tooYoung": "You must be 18 years or older to access this site"
+    }
+  },
+  "postalCode": {
+    "title": "Enter your postal code",
+    "placeholder": "Postal code",
+    "verify": "Verify",
+    "quantity": "Quantity",
+    "checkout": "Proceed to checkout",
+    "invalidCode": "Invalid postal code for delivery",
+    "validCode": "Delivery available to {{code}}"
+  }
+}

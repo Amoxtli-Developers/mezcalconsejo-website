@@ -1,0 +1,177 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "shop": "Tienda",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title1": "Auténtico Mezcal Artesanal",
+    "subtitle1": "Descubre la esencia pura del mezcal oaxaqueño. Elaborado con técnicas ancestrales y agave cultivado en los valles sagrados de Oaxaca.",
+    "cta1": "Explorar Colección",
+    "title2": "Proceso Tradicional",
+    "subtitle2": "Cada botella cuenta la historia de nuestros maestros mezcaleros",
+    "cta2": "Conocer Más",
+    "title3": "Calidad Premium",
+    "subtitle3": "Seleccionamos solo el mejor agave maduro para nuestros mezcales",
+    "cta3": "Comprar Ahora"
+  },
+  "about": {
+    "title": "Nuestro Mezcal",
+    "subtitle": "Una fuente de inspiración, porque hay momentos en que sólo necesitas un buen consejo para atreverte a hacer lo que te apasiona.",
+    "sections": {
+      "oaxaca": {
+        "content": [
+          "Cuando bebes mezcal, cada sorbo evoca rasgos de su lugar de origen, cada copa va narrando aspectos de la identidad de un pueblo lleno de diversidad y color.",
+          "Con denominación de origen en 9 regiones de México, Oaxaca produce más del 80% a nivel nacional. La producción de mezcal impacta directamente en el bienestar de las comunidades rurales, generando oportunidades y fuentes de empleo digno para miles de familias, manteniéndolas unidas, sin necesidad de emigrar para buscar mejores fuentes de ingresos.",
+          "El mezcal es mucho más que una bebida espirituosa, está presente en los lugares, en los recuerdos, en las historias, en la música, la gastronomía.",
+          "Gracias a un trabajo de revalorización y de dignificación, en la actualidad el mezcal ha ganado terreno en el mundo de la coctelería y bebidas, haciéndose presente en todo el mundo."
+        ]
+      },
+      "expert": {
+        "content": [
+          "Un proceso de años de trabajo y tradición",
+          "Con más de 20 años en el arte de destilar mezcal; aventurero y apasionado, sigue la tradición del oficio que le enseñó su padre, trabajando las mismas tierras con respeto y cuidado, perfeccionando sus técnicas y aprendiendo.",
+          "No hay ningún secreto, solo trabajo arduo y años de experiencia. Un hombre de rituales, un hombre sensible y sabio.",
+          "Autor del primer lote de Mezcal Consejo."
+        ],
+        "quote": "Todo tiene un límite"
+      },
+      "location": {
+        "content": [
+          "Chichic es 'amargo´ y apan, 'en el agua' Su toponimia ha sido interpretada como \"Río de la amargura\"; dicho también \"En el agua amarga\".",
+          "Chichicápam fue uno de los centros comerciales más importantes debido a su ubicación estratégica en el intermedio de zonas y poblados de los valles centrales, lo que le hacía paso necesario a los destinos que hoy conocemos como la región del Istmo y Miahuatlán.",
+          "Actualmente su principal actividad económica es la producción de mezcal."
+        ]
+      },
+      "process": {
+        "content": [
+          "El producto habla por sí mismo. Max es muy estricto en cada etapa del proceso, cultivando el agave de manera natural y orgánica, sin pesticidas o abonos químicos; respetando los tiempos de maduración, para cortar en el momento preciso y obtener la cantidad óptima de azúcares.",
+          "Para destilar un mezcal limpio y de calidad. En la graduación del producto final está el toque del autor. El mezcal de verdad se gradúa arriba de los 40º el reto es llegar a un sabor ligero y delicado, manteniendo el carácter y la fuerza del mezcal."
+        ]
+      },
+      "image": {
+        "content": [
+          "Descubrir el mezcal de Max fue una revelación, la tarea, darlo a conocer al mundo. La responsabilidad era grande; teníamos que hacer algo chingón para ponernos a la misma altura.",
+          "Así reunimos esfuerzos y visiones para crear un concepto alineado con el arte, el sentir, y el imaginario mexicano, para poder ofrecer una experiencia única. Una experiencia inolvidable, como los buenos consejos."
+        ]
+      }
+    },
+    "stats": {
+      "oaxacaProduction": "Producción nacional de Oaxaca",
+      "masterExperience": "Años de experiencia del maestro",
+      "denominations": "Regiones con denominación de origen",
+      "alcoholGraduation": "Graduación del mezcal"
+    }
+  },
+  "quote": {
+    "text": "\"El mezcal no es solo una bebida, es la esencia misma de nuestra tierra, el fruto del tiempo y la paciencia de nuestros ancestros.\"",
+    "author": "— Maestro Mezcalero"
+  },
+  "shop": {
+    "title": "Nuestra Selección",
+    "subtitle": "Cada mezcal en nuestra colección cuenta una historia única de tradición y sabor",
+    "buyNow": "Comprar"
+  },
+  "gallery": {
+    "title": "Del Agave a la Botella",
+    "subtitle": "Un viaje visual a través de nuestro proceso de producción artesanal",
+    "categories": {
+      "agave": "Agave",
+      "process": "Proceso",
+      "product": "Producto",
+      "experience": "Experiencia",
+      "people": "Personas",
+      "equipment": "Equipo"
+    },
+    "descriptions": {
+      "1": "Plantaciones de agave espadín en los valles centrales",
+      "2": "Maestro mezcalero preparando el horno de tierra",
+      "3": "Maguey maduro listo para la cosecha",
+      "4": "Destilación en alambiques tradicionales de cobre",
+      "5": "Colección de mezcales premium",
+      "6": "Cata de mezcal en nuestra destilería",
+      "7": "Familia de productores de mezcal",
+      "8": "Molino de piedra tradicional",
+      "9": "Fermentación en tinas de madera"
+    }
+  },
+  "cta": {
+    "title": "Descubre la Autenticidad",
+    "subtitle": "Únete a miles de amantes del mezcal que han elegido la calidad y tradición de Mezcal Consejo",
+    "button": "Contactar",
+    "secondaryButton": "Ver Catálogo",
+    "stats": {
+      "customers": "Clientes satisfechos",
+      "products": "Productos premium",
+      "experience": "Años de experiencia"
+    }
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "subtitle": "Estamos aquí para responder todas tus preguntas sobre nuestros mezcales",
+    "form": {
+      "name": "Nombre completo",
+      "namePlaceholder": "Tu nombre",
+      "email": "Correo electrónico",
+      "emailPlaceholder": "tu@email.com",
+      "message": "Mensaje",
+      "messagePlaceholder": "Cuéntanos qué tienes en mente...",
+      "send": "Enviar mensaje",
+      "sending": "Enviando...",
+      "sent": "¡Mensaje enviado exitosamente!"
+    },
+    "info": {
+      "phone": {
+        "title": "Teléfono",
+        "value": "+52 951 123 4567"
+      },
+      "email": {
+        "title": "Email",
+        "value": "info@mezcalconsejo.mx"
+      },
+      "location": {
+        "title": "Ubicación",
+        "value": "Oaxaca, México"
+      }
+    },
+    "social": "Síguenos"
+  },
+  "footer": {
+    "brand": {
+      "description": "Tradición ancestral, calidad excepcional. Descubre el auténtico sabor del mezcal oaxaqueño elaborado con técnicas tradicionales y agave de primera calidad."
+    },
+    "navigation": "Navegación",
+    "contactTitle": "Contacto",
+    "copyright": "© 2024 Mezcal Consejo. Todos los derechos reservados.",
+    "links": {
+      "privacy": "Política de Privacidad",
+      "terms": "Términos de Servicio",
+      "cookies": "Política de Cookies"
+    }
+  },
+  "ageVerification": {
+    "title": "Verificación de Edad",
+    "message": "Para acceder a este sitio, ingresa tu fecha de nacimiento:",
+    "day": "Día",
+    "dayPlaceholder": "Día",
+    "month": "Mes",
+    "monthPlaceholder": "Mes",
+    "year": "Año",
+    "yearPlaceholder": "Año",
+    "verify": "Verificar Edad",
+    "error": {
+      "incomplete": "Por favor, completa todos los campos",
+      "tooYoung": "Debes ser mayor de 18 años para acceder a este sitio"
+    }
+  },
+  "postalCode": {
+    "title": "Ingresa tu código postal",
+    "placeholder": "Código postal",
+    "verify": "Verificar",
+    "quantity": "Cantidad",
+    "checkout": "Proceder al pago",
+    "invalidCode": "Código postal no válido para entrega",
+    "validCode": "Envío disponible a {{code}}"
+  }
+}

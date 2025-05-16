@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-6 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24;
+  }
+  
+  .container-notion {
+    @apply max-w-screen-xl mx-auto;
+  }
+  
+  .text-gradient {
+    background: linear-gradient(to right, #BD1724, #F29108);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .border-subtle {
+    @apply border border-gray-200 dark:border-gray-700;
+  }
+  
+  .bg-subtle {
+    @apply bg-white dark:bg-gray-900;
+  }
+  
+  .hover-lift {
+    @apply transform hover:-translate-y-1 transition-all duration-300;
+  }
+  
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-900;
+    --tw-ring-color: #BD1724;
+  }
+  
+  /* Brand Color Utilities */
+  .bg-brand-primary {
+    background-color: #BD1724;
+  }
+  
+  .text-brand-primary {
+    color: #BD1724;
+  }
+  
+  .bg-brand-secondary {
+    background-color: #F29108;
+  }
+  
+  .text-brand-secondary {
+    color: #F29108;
+  }
+  
+  .bg-brand-accent {
+    background-color: #228B22;
+  }
+  
+  .text-brand-accent {
+    color: #228B22;
+  }
+}
+
+/* Swiper customizations with new colors */
+.minimal-swiper .swiper-pagination-bullet {
+  background-color: #F29108;
+  opacity: 0.5;
+}
+
+.minimal-swiper .swiper-pagination-bullet-active {
+  background-color: #BD1724;
+  opacity: 1;
+}
+
+.minimal-swiper .swiper-button-next,
+.minimal-swiper .swiper-button-prev {
+  color: #BD1724;
+}
+
+[data-theme="dark"] .minimal-swiper .swiper-button-next,
+[data-theme="dark"] .minimal-swiper .swiper-button-prev {
+  color: #FF6B7A;
+}
+
+/* Custom scrollbar with brand colors */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #BD1724;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #BD1724;
+}
+
+/* Selection colors */
+::selection {
+  background-color: rgba(189, 23, 36, 0.2);
+  color: #BD1724;
+}
+
+::-moz-selection {
+  background-color: rgba(189, 23, 36, 0.2);
+  color: #BD1724;
+}
+
+/* Focus styles for better accessibility with new colors */
+.focus-ring-primary {
+  @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
+  --tw-ring-color: #BD1724;
+}
+
+.focus-ring-secondary {
+  @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
+  --tw-ring-color: #F29108;
+}
