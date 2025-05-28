@@ -10,9 +10,9 @@ const HeroSection = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="home" className="relative min-h-screen flex flex-col justify-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex flex-col justify-center overflow-hidden w-full">
       {/* Background Video */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 w-full">
         <video
           autoPlay
           muted
@@ -31,8 +31,8 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container-notion section-padding">
-        <div className="max-w-4xl">
+      <div className="relative z-10 container-notion section-padding w-full">
+        <div className="max-w-4xl w-full">
           {/* Subtitle */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -73,7 +73,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4 mb-16"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-16 w-full"
           >
             <button
               onClick={() => {
@@ -106,7 +106,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex items-center space-x-12"
+            className="flex items-center space-x-8 sm:space-x-12 overflow-x-auto sm:overflow-x-visible"
           >
             <div className="text-left">
               <div className="heading-tertiary text-white">20+</div>

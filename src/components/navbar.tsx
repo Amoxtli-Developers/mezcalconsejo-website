@@ -55,14 +55,14 @@ const Navbar = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6 }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${
           isScrolled 
             ? 'bg-white/95 backdrop-blur-md border-b border-gray-100' 
             : 'bg-transparent'
         }`}
       >
-        <div className="container-notion">
-          <div className="flex items-center justify-between py-4">
+        <div className="container-notion w-full">
+          <div className="flex items-center justify-between py-4 w-full">
             {/* Logo */}
             <motion.div
               whileHover={{ scale: 1.05 }}
