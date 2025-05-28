@@ -1,8 +1,13 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Fredoka } from 'next/font/google'
 import Providers from './providers'
 
-const inter = Inter({ subsets: ['latin'] })
+const fredoka = Fredoka({ 
+  subsets: ['latin'],
+  weight: ['300', '400', '500'],
+  display: 'swap',
+  variable: '--font-fredoka'
+})
 
 export const metadata = {
   title: 'Mezcal Consejo - Authentic Mezcal from Oaxaca',
@@ -17,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${fredoka.variable} font-fredoka`}>
         <Providers>
           {children}
         </Providers>

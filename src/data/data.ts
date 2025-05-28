@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 export interface PostalCode {
   code: string;
   state: string;
@@ -51,6 +53,55 @@ export interface Product {
   category: string;
 }
 
+// Base product data with static information
+const baseProducts = [
+  {
+    id: "1",
+    price: 1200,
+    image: "/api/placeholder/400/600",
+  },
+  {
+    id: "2", 
+    price: 1800,
+    image: "/api/placeholder/400/600",
+  },
+  {
+    id: "3",
+    price: 1500,
+    image: "/api/placeholder/400/600",
+  },
+  {
+    id: "4",
+    price: 2100,
+    image: "/api/placeholder/400/600",
+  },
+  {
+    id: "5",
+    price: 2800,
+    image: "/api/placeholder/400/600",
+  },
+  {
+    id: "6",
+    price: 1900,
+    image: "/api/placeholder/400/600",
+  }
+];
+
+// Hook to get translated products
+export const useProducts = (): Product[] => {
+  const { t } = useTranslation();
+  
+  return baseProducts.map(product => ({
+    id: product.id,
+    name: t(`products.${product.id}.name`),
+    description: t(`products.${product.id}.description`),
+    category: t(`products.${product.id}.category`),
+    price: product.price,
+    image: product.image,
+  }));
+};
+
+// For backward compatibility, export static products (fallback to Spanish)
 export const products: Product[] = [
   {
     id: "1",

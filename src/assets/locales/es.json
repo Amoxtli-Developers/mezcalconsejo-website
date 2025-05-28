@@ -6,6 +6,7 @@
     "contact": "Contacto"
   },
   "hero": {
+    "subtitle": "Producción Artesanal",
     "title1": "Auténtico Mezcal Artesanal",
     "subtitle1": "Descubre la esencia pura del mezcal oaxaqueño. Elaborado con técnicas ancestrales y agave cultivado en los valles sagrados de Oaxaca.",
     "cta1": "Explorar Colección",
@@ -14,11 +15,49 @@
     "cta2": "Conocer Más",
     "title3": "Calidad Premium",
     "subtitle3": "Seleccionamos solo el mejor agave maduro para nuestros mezcales",
-    "cta3": "Comprar Ahora"
+    "cta3": "Comprar Ahora",
+    "watchVideo": "Ver Video",
+    "scroll": "Descubre más",
+    "stats": {
+      "experience": "Años de experiencia",
+      "agave": "Agave puro"
+    }
+  },
+  "video": {
+    "subtitle": "Nuestra Filosofía",
+    "title": "Más que un mezcal",
+    "description": "Una fuente de inspiración, porque hay momentos en que sólo necesitas un buen consejo para atreverte a hacer lo que te apasiona.",
+    "point1": "Tradición ancestral preservada",
+    "point2": "Calidad excepcional garantizada", 
+    "point3": "Compromiso con la comunidad",
+    "cta": "Conocer nuestra historia"
+  },
+  "founders": {
+    "subtitle": "Los Fundadores",
+    "title": "Historia de Omar y Luna",
+    "description": "Dos visionarios unidos por la pasión del mezcal y el compromiso con la tradición oaxaqueña.",
+    "omar": {
+      "role": "Co-fundador & Visionario",
+      "description": "Con una pasión innata por la cultura mexicana y un ojo para los detalles, Omar vio en el mezcal una oportunidad de compartir la riqueza de nuestras tradiciones con el mundo."
+    },
+    "luna": {
+      "role": "Co-fundadora & Estratega",
+      "description": "Luna aporta su experiencia en negocios y su amor por la autenticidad. Su visión estratégica ha sido clave para llevar Mezcal Consejo a nuevos horizontes sin perder sus raíces."
+    },
+    "vision": "Nuestro sueño es que cada sorbo de Mezcal Consejo conecte a las personas con la tierra, la tradición y la pasión que ponemos en cada botella.",
+    "foundersTitle": "Fundadores de Mezcal Consejo"
   },
   "about": {
     "title": "Nuestro Mezcal",
     "subtitle": "Una fuente de inspiración, porque hay momentos en que sólo necesitas un buen consejo para atreverte a hacer lo que te apasiona.",
+    "sectionTitles": {
+      "oaxaca": "Oaxaca",
+      "expert": "El Experto",
+      "location": "San Baltazar Chichicápam",
+      "process": "El Proceso",
+      "image": "La Imagen"
+    },
+    "masterName": "Maximino Vázquez",
     "sections": {
       "oaxaca": {
         "content": [
@@ -64,9 +103,37 @@
       "alcoholGraduation": "Graduación del mezcal"
     }
   },
-  "quote": {
-    "text": "\"El mezcal no es solo una bebida, es la esencia misma de nuestra tierra, el fruto del tiempo y la paciencia de nuestros ancestros.\"",
-    "author": "— Maestro Mezcalero"
+  "products": {
+    "1": {
+      "name": "Mezcal Espadín Artesanal",
+      "description": "Elaborado con agave espadín cultivado en los valles centrales de Oaxaca. Destilado dos veces en alambiques de cobre, presenta notas herbales y un final suave con ligeros toques ahumados.",
+      "category": "Tradicional"
+    },
+    "2": {
+      "name": "Mezcal Tobaziche Joven",
+      "description": "Elaborado con agave tobaziche silvestre, recolectado después de 12-15 años de maduración. Sabor complejo con notas terrosas, minerales y un final prolongado con toques de especias.",
+      "category": "Premium"
+    },
+    "3": {
+      "name": "Mezcal Ensemble",
+      "description": "Mezcla única de tres tipos de agave: espadín, tobaziche y arroqueño. Esta combinación crea un perfil de sabor balanceado con notas frutales, herbales y un sutil ahumado.",
+      "category": "Edición Especial"
+    },
+    "4": {
+      "name": "Mezcal Arroqueño Reposado",
+      "description": "Agave arroqueño silvestre reposado en barricas de roble americano durante 6 meses. Presenta notas de vainilla, caramelo y especias, con un final largo y sedoso.",
+      "category": "Reposado"
+    },
+    "5": {
+      "name": "Mezcal Tepeztate Ancestral",
+      "description": "Elaborado con agave tepeztate, una variedad que tarda hasta 25 años en madurar. Destilado en ollas de barro, ofrece un sabor único con notas florales y minerales excepcionales.",
+      "category": "Ancestral"
+    },
+    "6": {
+      "name": "Mezcal Madrecuixe",
+      "description": "Proveniente de agave madrecuixe silvestre de la sierra mixteca. Presenta un perfil complejo con notas herbales intensas, toques cítricos y un final largo con mineralidad distintiva.",
+      "category": "Silvestre"
+    }
   },
   "shop": {
     "title": "Nuestra Selección",

@@ -44,15 +44,15 @@ const AgeVerificationModal: React.FC<AgeVerificationModalProps> = ({ onVerificat
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl max-w-md w-full p-8"
+        className="bg-white rounded-3xl shadow-xl max-w-md w-full p-8"
       >
         <div className="text-center space-y-6">
-          <Calendar className="w-16 h-16 mx-auto text-gray-900 dark:text-gray-100" />
+          <Calendar className="w-16 h-16 mx-auto text-gray-900" />
           <div>
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+            <h2 className="heading-secondary text-gray-900 mb-2">
               {t('ageVerification.title')}
             </h2>
-            <p className="text-gray-600 dark:text-gray-400">
+            <p className="text-body text-gray-600">
               {t('ageVerification.message')}
             </p>
           </div>
@@ -60,13 +60,13 @@ const AgeVerificationModal: React.FC<AgeVerificationModalProps> = ({ onVerificat
           <div className="space-y-6">
             <div className="grid grid-cols-3 gap-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label className="block text-body-small font-medium text-gray-700 mb-2">
                   {t('ageVerification.day')}
                 </label>
                 <select
                   value={day}
                   onChange={(e) => setDay(e.target.value)}
-                  className="w-full border border-gray-300 dark:border-gray-600 rounded-xl px-3 py-3 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus-ring appearance-none cursor-pointer"
+                  className="w-full border border-gray-300 rounded-xl px-3 py-3 bg-white text-gray-900 focus-ring appearance-none cursor-pointer text-body"
                 >
                   <option value="">{t('ageVerification.dayPlaceholder')}</option>
                   {Array.from({ length: 31 }, (_, i) => (
@@ -77,13 +77,13 @@ const AgeVerificationModal: React.FC<AgeVerificationModalProps> = ({ onVerificat
                 </select>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label className="block text-body-small font-medium text-gray-700 mb-2">
                   {t('ageVerification.month')}
                 </label>
                 <select
                   value={month}
                   onChange={(e) => setMonth(e.target.value)}
-                  className="w-full border border-gray-300 dark:border-gray-600 rounded-xl px-3 py-3 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus-ring appearance-none cursor-pointer"
+                  className="w-full border border-gray-300 rounded-xl px-3 py-3 bg-white text-gray-900 focus-ring appearance-none cursor-pointer text-body"
                 >
                   <option value="">{t('ageVerification.monthPlaceholder')}</option>
                   {Array.from({ length: 12 }, (_, i) => (
@@ -94,13 +94,13 @@ const AgeVerificationModal: React.FC<AgeVerificationModalProps> = ({ onVerificat
                 </select>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label className="block text-body-small font-medium text-gray-700 mb-2">
                   {t('ageVerification.year')}
                 </label>
                 <select
                   value={year}
                   onChange={(e) => setYear(e.target.value)}
-                  className="w-full border border-gray-300 dark:border-gray-600 rounded-xl px-3 py-3 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus-ring appearance-none cursor-pointer"
+                  className="w-full border border-gray-300 rounded-xl px-3 py-3 bg-white text-gray-900 focus-ring appearance-none cursor-pointer text-body"
                 >
                   <option value="">{t('ageVerification.yearPlaceholder')}</option>
                   {Array.from({ length: 100 }, (_, i) => (
@@ -113,14 +113,14 @@ const AgeVerificationModal: React.FC<AgeVerificationModalProps> = ({ onVerificat
             </div>
             
             {error && (
-              <p className="text-red-500 dark:text-red-400 text-sm text-center bg-red-50 dark:bg-red-900/20 p-3 rounded-xl">
+              <p className="text-red-500 text-body-small text-center bg-red-50 p-3 rounded-xl">
                 {error}
               </p>
             )}
             
             <button
               onClick={handleVerify}
-              className="w-full bg-gray-900 dark:bg-gray-100 hover:bg-gray-800 dark:hover:bg-gray-200 text-white dark:text-gray-900 py-4 px-6 rounded-2xl font-semibold transition-colors focus-ring"
+              className="w-full bg-gray-900 hover:bg-gray-800 text-white py-4 px-6 rounded-2xl text-button transition-colors focus-ring"
             >
               {t('ageVerification.verify')}
             </button>

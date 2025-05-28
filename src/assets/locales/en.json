@@ -6,6 +6,7 @@
     "contact": "Contact"
   },
   "hero": {
+    "subtitle": "Artisanal Production",
     "title1": "Authentic Artisan Mezcal",
     "subtitle1": "Discover the pure essence of Oaxacan mezcal. Crafted with ancestral techniques and agave cultivated in the sacred valleys of Oaxaca.",
     "cta1": "Explore Collection",
@@ -14,11 +15,49 @@
     "cta2": "Learn More",
     "title3": "Premium Quality",
     "subtitle3": "We select only the finest mature agave for our mezcals",
-    "cta3": "Shop Now"
+    "cta3": "Shop Now",
+    "watchVideo": "Watch Video",
+    "scroll": "Discover more",
+    "stats": {
+      "experience": "Years of experience",
+      "agave": "Pure agave"
+    }
+  },
+  "video": {
+    "subtitle": "Our Philosophy",
+    "title": "More than a mezcal",
+    "description": "A source of inspiration, because there are moments when you just need good advice to dare to do what you're passionate about.",
+    "point1": "Ancestral tradition preserved",
+    "point2": "Exceptional quality guaranteed",
+    "point3": "Commitment to community",
+    "cta": "Learn our story"
+  },
+  "founders": {
+    "subtitle": "The Founders",
+    "title": "Story of Omar and Luna",
+    "description": "Two visionaries united by their passion for mezcal and commitment to Oaxacan tradition.",
+    "omar": {
+      "role": "Co-founder & Visionary",
+      "description": "With an innate passion for Mexican culture and an eye for detail, Omar saw in mezcal an opportunity to share the richness of our traditions with the world."
+    },
+    "luna": {
+      "role": "Co-founder & Strategist",
+      "description": "Luna brings her business experience and love for authenticity. Her strategic vision has been key to taking Mezcal Consejo to new horizons without losing its roots."
+    },
+    "vision": "Our dream is that every sip of Mezcal Consejo connects people with the land, tradition, and passion we put into every bottle.",
+    "foundersTitle": "Founders of Mezcal Consejo"
   },
   "about": {
     "title": "Our Mezcal",
     "subtitle": "A source of inspiration, because there are moments when you just need good advice to dare to do what you're passionate about.",
+    "sectionTitles": {
+      "oaxaca": "Oaxaca",
+      "expert": "The Expert",
+      "location": "San Baltazar Chichicápam",
+      "process": "The Process",
+      "image": "The Image"
+    },
+    "masterName": "Maximino Vázquez",
     "sections": {
       "oaxaca": {
         "content": [
@@ -64,9 +103,37 @@
       "alcoholGraduation": "Mezcal graduation"
     }
   },
-  "quote": {
-    "text": "\"Mezcal is not just a drink, it is the very essence of our land, the fruit of time and the patience of our ancestors.\"",
-    "author": "— Master Mezcalero"
+  "products": {
+    "1": {
+      "name": "Artisanal Espadín Mezcal",
+      "description": "Crafted with espadín agave cultivated in the central valleys of Oaxaca. Double distilled in copper stills, it presents herbal notes and a smooth finish with light smoky touches.",
+      "category": "Traditional"
+    },
+    "2": {
+      "name": "Young Tobaziche Mezcal",
+      "description": "Made with wild tobaziche agave, harvested after 12-15 years of maturation. Complex flavor with earthy, mineral notes and a prolonged finish with spice touches.",
+      "category": "Premium"
+    },
+    "3": {
+      "name": "Ensemble Mezcal",
+      "description": "Unique blend of three types of agave: espadín, tobaziche and arroqueño. This combination creates a balanced flavor profile with fruity, herbal notes and subtle smokiness.",
+      "category": "Special Edition"
+    },
+    "4": {
+      "name": "Reposado Arroqueño Mezcal",
+      "description": "Wild arroqueño agave aged in American oak barrels for 6 months. Features notes of vanilla, caramel and spices, with a long and silky finish.",
+      "category": "Reposado"
+    },
+    "5": {
+      "name": "Ancestral Tepeztate Mezcal",
+      "description": "Made with tepeztate agave, a variety that takes up to 25 years to mature. Distilled in clay pots, it offers a unique flavor with exceptional floral and mineral notes.",
+      "category": "Ancestral"
+    },
+    "6": {
+      "name": "Madrecuixe Mezcal",
+      "description": "From wild madrecuixe agave from the Mixtec highlands. Features a complex profile with intense herbal notes, citrus touches and a long finish with distinctive minerality.",
+      "category": "Wild"
+    }
   },
   "shop": {
     "title": "Our Selection",

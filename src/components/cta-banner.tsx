@@ -11,7 +11,7 @@ const CTABanner = () => {
   const isInView = useInView(ref, { once: true});
 
   return (
-    <section className="section-padding bg-white dark:bg-gray-900">
+    <section className="section-padding bg-white">
       <div className="container-notion">
         <div ref={ref} className="relative overflow-hidden rounded-3xl bg-brand-primary p-12 text-center">
           {/* Background pattern */}
@@ -26,7 +26,7 @@ const CTABanner = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8 }}
-              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
+              className="heading-primary text-white mb-6"
             >
               {t('cta.title')}
             </motion.h2>
@@ -35,7 +35,7 @@ const CTABanner = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-white/90"
+              className="text-body-large text-white/90 mb-8 max-w-2xl mx-auto"
             >
               {t('cta.subtitle')}
             </motion.p>
@@ -53,7 +53,7 @@ const CTABanner = () => {
                     contactElement.scrollIntoView({ behavior: 'smooth' });
                   }
                 }}
-                className="group inline-flex items-center justify-center px-8 py-4 text-lg font-semibold bg-white text-red-800 rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 focus-ring"
+                className="group btn-primary bg-white text-red-800 rounded-full hover:bg-gray-100 px-8 py-4 text-button transform hover:scale-105"
               >
                 {t('cta.button')}
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -65,7 +65,7 @@ const CTABanner = () => {
                     shopElement.scrollIntoView({ behavior: 'smooth' });
                   }
                 }}
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white border-2 border-white rounded-full hover:bg-white hover:text-red-800 transition-all duration-300 focus-ring"
+                className="inline-flex items-center justify-center px-8 py-4 text-button text-white border-2 border-white rounded-full hover:bg-white hover:text-red-800 transition-all duration-300 focus-ring"
               >
                 {t('cta.secondaryButton')}
               </button>
@@ -78,16 +78,16 @@ const CTABanner = () => {
               className="mt-12 grid grid-cols-3 gap-8 max-w-md mx-auto"
             >
               <div className="text-center">
-                <div className="text-2xl font-bold">1,000+</div>
-                <div className="text-sm text-white/80">{t('cta.stats.customers')}</div>
+                <div className="heading-tertiary text-white">1,000+</div>
+                <div className="text-caption text-white/80">{t('cta.stats.customers')}</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold">50+</div>
-                <div className="text-sm text-white/80">{t('cta.stats.products')}</div>
+                <div className="heading-tertiary text-white">50+</div>
+                <div className="text-caption text-white/80">{t('cta.stats.products')}</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold">25</div>
-                <div className="text-sm text-white/80">{t('cta.stats.experience')}</div>
+                <div className="heading-tertiary text-white">25</div>
+                <div className="text-caption text-white/80">{t('cta.stats.experience')}</div>
               </div>
             </motion.div>
           </div>

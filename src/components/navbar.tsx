@@ -1,310 +1,235 @@
-"use client";
+'use client';
 
-import React, { useState, useEffect } from "react";
-import { useTranslation } from "react-i18next";
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Sun, Moon } from "lucide-react";
-import { useTheme } from "./theme-provider";
-import Image from "next/image";
-import logoImage from "@/assets/images/logo.png";
+import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X, Globe } from 'lucide-react';
+import logo from '@/assets/images/logo.png';
 
 const Navbar = () => {
-    const { t, i18n } = useTranslation();
-    const { theme, toggleTheme } = useTheme();
-    const [isOpen, setIsOpen] = useState(false);
-    const [scrolled, setScrolled] = useState(false);
+  const { t, i18n } = useTranslation();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [showLangMenu, setShowLangMenu] = useState(false);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 50);
-        };
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
-
-    const navItems = [
-        { key: "home", href: "#home" },
-        { key: "about", href: "#about" },
-        { key: "shop", href: "#shop" },
-        { key: "contact", href: "#contact" },
-    ];
-
-    const changeLanguage = (lng: string) => {
-        i18n.changeLanguage(lng);
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
     };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-    return (
-        <nav
-            className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-                scrolled
-                    ? "bg-white/95 dark:bg-gray-950/95 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-800/50 shadow-sm"
-                    : "bg-transparent"
-            }`}
-        >
-            <div className="container-notion section-padding py-4">
-                {/* Desktop Navigation */}
-                <div className="hidden md:flex items-center">
-                    {/* Left side - flex with space for actions */}
-                    <div className="flex-1 flex justify-end pr-8">
-                        {/* Theme Toggle */}
-                        <button
-                            onClick={toggleTheme}
-                            className={`p-2 rounded-lg transition-all duration-200 hover:scale-110 ${
-                                scrolled
-                                    ? "hover:bg-gray-100 dark:hover:bg-gray-800"
-                                    : "hover:bg-white/10"
-                            }`}
-                        >
-                            {theme === "light" ? (
-                                <Moon
-                                    className={`w-5 h-5 ${
-                                        scrolled
-                                            ? "text-gray-600 dark:text-gray-400"
-                                            : "text-white/90"
-                                    }`}
-                                />
-                            ) : (
-                                <Sun
-                                    className={`w-5 h-5 ${
-                                        scrolled
-                                            ? "text-gray-600 dark:text-gray-400"
-                                            : "text-white/90"
-                                    }`}
-                                />
-                            )}
-                        </button>
-                    </div>
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
-                    {/* Left Navigation Links */}
-                    <div className="flex items-center space-x-2">
-                        {navItems.slice(0, 2).map((item) => (
-                            <a
-                                key={item.key}
-                                href={item.href}
-                                className={`px-3 py-2 text-sm font-medium transition-all duration-200 hover:scale-105 ${
-                                    scrolled
-                                        ? "text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-100/80 dark:hover:bg-gray-800/80 rounded-lg"
-                                        : "text-white/90 hover:text-white hover:bg-white/10 rounded-lg"
-                                }`}
-                            >
-                                {t(`navbar.${item.key}`)}
-                            </a>
-                        ))}
-                    </div>
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
 
-                    {/* Center Logo/Brand */}
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        className="mx-8"
-                    >
-                        <a
-                            href="#home"
-                            className="transition-all duration-200 hover:scale-105"
-                        >
-                            <Image
-                                src={logoImage}
-                                alt="Mezcal Consejo"
-                                className={` ${
-                                    scrolled ? "opacity-100" : "opacity-90"
-                                }`}
-                                width={scrolled ? 32 : 50}
-                                height={scrolled ? 32 : 50}
-                            />
-                        </a>
-                    </motion.div>
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      closeMenu();
+    }
+  };
 
-                    {/* Right Navigation Links */}
-                    <div className="flex items-center space-x-2">
-                        {navItems.slice(2).map((item) => (
-                            <a
-                                key={item.key}
-                                href={item.href}
-                                className={`px-3 py-2 text-sm font-medium transition-all duration-200 hover:scale-105 ${
-                                    scrolled
-                                        ? "text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-100/80 dark:hover:bg-gray-800/80 rounded-lg"
-                                        : "text-white/90 hover:text-white hover:bg-white/10 rounded-lg"
-                                }`}
-                            >
-                                {t(`navbar.${item.key}`)}
-                            </a>
-                        ))}
-                    </div>
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+    setShowLangMenu(false);
+  };
 
-                    {/* Right side - flex with space for language */}
-                    <div className="flex-1 flex pl-8">
-                        {/* Language Switcher */}
-                        <select
-                            value={i18n.language}
-                            onChange={(e) => changeLanguage(e.target.value)}
-                            className={`bg-transparent border-none text-sm font-medium cursor-pointer rounded-lg px-2 py-1 transition-all duration-200 focus-ring ${
-                                scrolled
-                                    ? "text-gray-700 dark:text-gray-300 hover:bg-gray-100/80 dark:hover:bg-gray-800/80"
-                                    : "text-white/90 hover:bg-white/10"
-                            }`}
-                        >
-                            <option
-                                value="es"
-                                className="bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-                            >
-                                ES
-                            </option>
-                            <option
-                                value="en"
-                                className="bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-                            >
-                                EN
-                            </option>
-                        </select>
-                    </div>
+  const navItems = [
+    { key: 'home', id: 'home' },
+    { key: 'about', id: 'about' },
+    { key: 'shop', id: 'shop' },
+    { key: 'contact', id: 'contact' }
+  ];
+
+  return (
+    <>
+      <motion.nav
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.6 }}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled 
+            ? 'bg-white/95 backdrop-blur-md border-b border-gray-100' 
+            : 'bg-transparent'
+        }`}
+      >
+        <div className="container-notion">
+          <div className="flex items-center justify-between py-4">
+            {/* Logo */}
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="cursor-pointer"
+              onClick={() => scrollToSection('home')}
+            >
+              <div className="flex items-center space-x-3">
+                {/* Logo Image */}
+                <div className="w-14 h-14 flex items-center justify-center">
+                  <img
+                    src={logo.src}
+                    alt="Mezcal Consejo Logo"
+                    className="w-12 h-12 object-contain"
+                  />
                 </div>
-
-                {/* Mobile Navigation */}
-                <div className="md:hidden flex items-center justify-between">
-                    {/* Mobile Menu Button (Left) */}
-                    <button
-                        onClick={() => setIsOpen(!isOpen)}
-                        className={`p-2 rounded-lg transition-all duration-200 ${
-                            scrolled
-                                ? "hover:bg-gray-100 dark:hover:bg-gray-800"
-                                : "hover:bg-white/10"
-                        }`}
-                    >
-                        {isOpen ? (
-                            <X
-                                className={`w-6 h-6 ${
-                                    scrolled
-                                        ? "text-gray-600 dark:text-gray-400"
-                                        : "text-white/90"
-                                }`}
-                            />
-                        ) : (
-                            <Menu
-                                className={`w-6 h-6 ${
-                                    scrolled
-                                        ? "text-gray-600 dark:text-gray-400"
-                                        : "text-white/90"
-                                }`}
-                            />
-                        )}
-                    </button>
-
-                    {/* Center Logo/Brand */}
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        className="flex-1 flex justify-center"
-                    >
-                        <a
-                            href="#home"
-                            className={`text-xl font-bold transition-colors ${
-                                scrolled
-                                    ? "text-gray-900 dark:text-gray-100"
-                                    : "text-white"
-                            }`}
-                        >
-                            Mezcal Consejo
-                        </a>
-                    </motion.div>
-
-                    {/* Mobile Actions (Right) */}
-                    <div className="flex items-center space-x-2">
-                        <button
-                            onClick={toggleTheme}
-                            className={`p-2 rounded-lg transition-all duration-200 ${
-                                scrolled
-                                    ? "hover:bg-gray-100 dark:hover:bg-gray-800"
-                                    : "hover:bg-white/10"
-                            }`}
-                        >
-                            {theme === "light" ? (
-                                <Moon
-                                    className={`w-5 h-5 ${
-                                        scrolled
-                                            ? "text-gray-600 dark:text-gray-400"
-                                            : "text-white/90"
-                                    }`}
-                                />
-                            ) : (
-                                <Sun
-                                    className={`w-5 h-5 ${
-                                        scrolled
-                                            ? "text-gray-600 dark:text-gray-400"
-                                            : "text-white/90"
-                                    }`}
-                                />
-                            )}
-                        </button>
-                    </div>
+                {/* Brand Text */}
+                <div className={`heading-small ${
+                  isScrolled ? 'text-gray-900' : 'text-white'
+                }`}>
+                  MEZCAL CONSEJO
                 </div>
+              </div>
+            </motion.div>
 
-                {/* Mobile Menu */}
+            {/* Desktop Navigation */}
+            <div className="hidden lg:flex items-center space-x-8">
+              {navItems.map((item) => (
+                <button
+                  key={item.key}
+                  onClick={() => scrollToSection(item.id)}
+                  className={`text-button transition-colors duration-300 hover:text-brand-primary ${
+                    isScrolled ? 'text-gray-700' : 'text-white/90'
+                  }`}
+                >
+                  {t(`navbar.${item.key}`)}
+                </button>
+              ))}
+              
+              {/* Language Selector */}
+              <div className="relative">
+                <button
+                  onClick={() => setShowLangMenu(!showLangMenu)}
+                  className={`flex items-center space-x-1 text-button transition-colors duration-300 hover:text-brand-primary ${
+                    isScrolled ? 'text-gray-700' : 'text-white/90'
+                  }`}
+                >
+                  <Globe className="w-4 h-4" />
+                  <span className="uppercase">{i18n.language}</span>
+                </button>
+                
                 <AnimatePresence>
-                    {isOpen && (
-                        <motion.div
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: "auto" }}
-                            exit={{ opacity: 0, height: 0 }}
-                            className={`md:hidden mt-4 py-4 rounded-lg ${
-                                scrolled
-                                    ? "bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl border border-gray-200/50 dark:border-gray-800/50"
-                                    : "bg-black/20 backdrop-blur-xl border border-white/10"
-                            }`}
-                        >
-                            <div className="flex flex-col space-y-3 px-4">
-                                {navItems.map((item) => (
-                                    <a
-                                        key={item.key}
-                                        href={item.href}
-                                        onClick={() => setIsOpen(false)}
-                                        className={`px-3 py-2 text-sm font-medium transition-all duration-200 rounded-lg ${
-                                            scrolled
-                                                ? "text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-100/80 dark:hover:bg-gray-800/80"
-                                                : "text-white/90 hover:text-white hover:bg-white/10"
-                                        }`}
-                                    >
-                                        {t(`navbar.${item.key}`)}
-                                    </a>
-                                ))}
-                                <div
-                                    className={`flex items-center justify-between pt-3 border-t ${
-                                        scrolled
-                                            ? "border-gray-200 dark:border-gray-800"
-                                            : "border-white/20"
-                                    }`}
-                                >
-                                    <select
-                                        value={i18n.language}
-                                        onChange={(e) =>
-                                            changeLanguage(e.target.value)
-                                        }
-                                        className={`bg-transparent border-none text-sm font-medium cursor-pointer rounded-lg px-2 py-1 ${
-                                            scrolled
-                                                ? "text-gray-700 dark:text-gray-300"
-                                                : "text-white/90"
-                                        }`}
-                                    >
-                                        <option
-                                            value="es"
-                                            className="bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-                                        >
-                                            ES
-                                        </option>
-                                        <option
-                                            value="en"
-                                            className="bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-                                        >
-                                            EN
-                                        </option>
-                                    </select>
-                                </div>
-                            </div>
-                        </motion.div>
-                    )}
+                  {showLangMenu && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute right-0 top-full mt-2 bg-white border border-gray-100 shadow-sm py-2 min-w-[80px]"
+                    >
+                      <button
+                        onClick={() => changeLanguage('es')}
+                        className="block w-full text-left px-4 py-2 text-body-small text-gray-700 hover:bg-gray-50 transition-colors"
+                      >
+                        ES
+                      </button>
+                      <button
+                        onClick={() => changeLanguage('en')}
+                        className="block w-full text-left px-4 py-2 text-body-small text-gray-700 hover:bg-gray-50 transition-colors"
+                      >
+                        EN
+                      </button>
+                    </motion.div>
+                  )}
                 </AnimatePresence>
+              </div>
             </div>
-        </nav>
-    );
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={toggleMenu}
+              className={`lg:hidden p-2 transition-colors duration-300 ${
+                isScrolled ? 'text-gray-900' : 'text-white'
+              }`}
+            >
+              {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </button>
+          </div>
+        </div>
+      </motion.nav>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-40 lg:hidden"
+          >
+            <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={closeMenu} />
+            <motion.div
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ type: 'tween', duration: 0.3 }}
+              className="absolute right-0 top-0 bottom-0 w-80 bg-white"
+            >
+              <div className="p-6">
+                {/* Mobile Logo */}
+                <div className="flex items-center justify-between mb-8">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-10 h-10 flex items-center justify-center">
+                      <img
+                        src={logo.src}
+                        alt="Mezcal Consejo Logo"
+                        className="w-8 h-8 object-contain"
+                      />
+                    </div>
+                    <span className="heading-small text-gray-900">
+                      MEZCAL CONSEJO
+                    </span>
+                  </div>
+                  <button onClick={closeMenu} className="p-2 text-gray-500">
+                    <X className="w-5 h-5" />
+                  </button>
+                </div>
+                
+                <div className="space-y-6">
+                  {navItems.map((item) => (
+                    <button
+                      key={item.key}
+                      onClick={() => scrollToSection(item.id)}
+                      className="block w-full text-left text-body text-gray-900 hover:text-brand-primary transition-colors"
+                    >
+                      {t(`navbar.${item.key}`)}
+                    </button>
+                  ))}
+                  
+                  <div className="border-t border-gray-100 pt-6">
+                    <div className="space-y-3">
+                      <button
+                        onClick={() => changeLanguage('es')}
+                        className={`block text-body-small transition-colors ${
+                          i18n.language === 'es' ? 'text-brand-primary font-medium' : 'text-gray-600'
+                        }`}
+                      >
+                        Español
+                      </button>
+                      <button
+                        onClick={() => changeLanguage('en')}
+                        className={`block text-body-small transition-colors ${
+                          i18n.language === 'en' ? 'text-brand-primary font-medium' : 'text-gray-600'
+                        }`}
+                      >
+                        English
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  );
 };
 
 export default Navbar;

@@ -1,7 +1,8 @@
 import Navbar from '@/components/navbar';
 import HeroSection from '@/components/hero-section';
+import VideoSection from '@/components/video-section';
 import AboutSection from '@/components/about-section';
-import QuoteSection from '@/components/quote-section';
+import FoundersSection from '@/components/founders-section';
 import ShopSection from '@/components/shop-section';
 import GallerySection from '@/components/gallery-section';
 import CTABanner from '@/components/cta-banner';
@@ -13,8 +14,11 @@ export default function Home() {
     <main>
       <Navbar />
       <HeroSection />
+      <div id="video">
+        <VideoSection />
+      </div>
       <AboutSection />
-      <QuoteSection />
+      <FoundersSection />
       <ShopSection />
       <GallerySection />
       <CTABanner />

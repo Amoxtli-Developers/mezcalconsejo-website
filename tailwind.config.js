@@ -75,7 +75,35 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Inter', 'sans-serif'],
+        fredoka: ['var(--font-fredoka)', 'Fredoka', 'sans-serif'],
+        sans: ['var(--font-fredoka)', 'Fredoka', 'sans-serif'],
+      },
+      fontSize: {
+        // Base sizes
+        'xs': ['0.75rem', { lineHeight: '1.5', letterSpacing: '-0.01em' }],
+        'sm': ['0.875rem', { lineHeight: '1.6', letterSpacing: '-0.01em' }],
+        'base': ['1rem', { lineHeight: '1.7', letterSpacing: '-0.01em' }],
+        'lg': ['1.125rem', { lineHeight: '1.7', letterSpacing: '-0.01em' }],
+        'xl': ['1.25rem', { lineHeight: '1.6', letterSpacing: '-0.02em' }],
+        
+        // Heading sizes - Mobile first
+        'h6': ['1rem', { lineHeight: '1.4', letterSpacing: '-0.01em', fontWeight: '500' }],
+        'h5': ['1.125rem', { lineHeight: '1.4', letterSpacing: '-0.01em', fontWeight: '500' }],
+        'h4': ['1.25rem', { lineHeight: '1.3', letterSpacing: '-0.02em', fontWeight: '500' }],
+        'h3': ['1.5rem', { lineHeight: '1.3', letterSpacing: '-0.02em', fontWeight: '500' }],
+        'h2': ['1.875rem', { lineHeight: '1.2', letterSpacing: '-0.03em', fontWeight: '500' }],
+        'h1': ['2.25rem', { lineHeight: '1.1', letterSpacing: '-0.03em', fontWeight: '500' }],
+        
+        // Large display sizes
+        'display-sm': ['3rem', { lineHeight: '1.1', letterSpacing: '-0.04em', fontWeight: '500' }],
+        'display-md': ['3.75rem', { lineHeight: '1.0', letterSpacing: '-0.04em', fontWeight: '500' }],
+        'display-lg': ['4.5rem', { lineHeight: '1.0', letterSpacing: '-0.05em', fontWeight: '500' }],
+        'display-xl': ['6rem', { lineHeight: '0.95', letterSpacing: '-0.05em', fontWeight: '500' }],
+      },
+      fontWeight: {
+        light: '300',
+        normal: '400',
+        medium: '500',
       },
       spacing: {
         '18': '4.5rem',

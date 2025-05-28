@@ -13,14 +13,14 @@ const GallerySection = () => {
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
 
   return (
-    <section id="gallery" className="section-padding bg-gray-50 dark:bg-gray-950">
+    <section id="gallery" className="section-padding bg-gray-50">
       <div className="container-notion">
         <div ref={ref} className="text-center mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-4"
+            className="heading-primary text-gray-900 mb-4"
           >
             {t('gallery.title')}
           </motion.h2>
@@ -28,7 +28,7 @@ const GallerySection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-lg text-gray-600 dark:text-gray-400"
+            className="text-body-large text-gray-600"
           >
             {t('gallery.subtitle')}
           </motion.p>
@@ -59,7 +59,7 @@ const GallerySection = () => {
                 <Maximize2 className="w-8 h-8 text-white" />
               </div>
               <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span className="text-sm font-medium bg-black/30 backdrop-blur-sm px-3 py-1 rounded-full">
+                <span className="text-body-small bg-black/30 backdrop-blur-sm px-3 py-1 rounded-full">
                   {t(`gallery.categories.${image.category.toLowerCase()}`)}
                 </span>
               </div>
@@ -93,10 +93,10 @@ const GallerySection = () => {
               className="w-full h-auto rounded-2xl"
             />
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 rounded-b-2xl">
-              <h3 className="text-white text-xl font-semibold mb-2">
+              <h3 className="heading-secondary text-white mb-2">
                 {t(`gallery.descriptions.${selectedImage.id}`)}
               </h3>
-              <span className="text-white/80 text-sm bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full">
+              <span className="text-body-small text-white/80 bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full">
                 {t(`gallery.categories.${selectedImage.category.toLowerCase()}`)}
               </span>
             </div>
